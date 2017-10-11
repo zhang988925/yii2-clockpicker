@@ -14,6 +14,10 @@ use yii\widgets\InputWidget;
  */
 class ClockPicker extends InputWidget
 {
+    public $options = [
+        'readonly' => 'true',
+        'autocomplete' => 'off',
+    ];
     /**
      * @var array options of the JS plugin.
      */
@@ -24,7 +28,7 @@ class ClockPicker extends InputWidget
         parent::init();
 
         if (!isset($this->pluginOptions['donetext'])) {
-            $this->pluginOptions['donetext'] = 'Done';
+            $this->pluginOptions['donetext'] = '确认';
         }
 
         Html::addCssClass($this->options, 'form-control');
